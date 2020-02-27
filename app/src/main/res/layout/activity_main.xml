@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+
+
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:context=".MainActivity" app:layout_anchorGravity="center" android:id="@+id/constraintLayout"
+            app:layout_anchor="@+id/constraintLayout">
+
+        <Button
+                android:text="Java"
+                android:layout_width="206dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/Java"
+                app:layout_constraintBottom_toTopOf="@+id/frameLayout" app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.987" app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/Kotlin" app:layout_constraintHorizontal_bias="0.0"
+                android:layout_marginTop="268dp"/>
+        <Button
+                android:text="Kotlin"
+                android:layout_width="206dp"
+                android:layout_height="50dp"
+                android:id="@+id/Kotlin"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent" app:layout_constraintEnd_toStartOf="@id/Java"
+                app:layout_constraintHorizontal_bias="0.023"
+                android:layout_marginLeft="216dp" android:layout_marginTop="268dp" android:layout_marginStart="216dp"
+                app:layout_constraintBottom_toTopOf="@+id/frameLayout" app:layout_constraintVertical_bias="1.0"/>
+        <TextView
+                android:textSize="25sp"
+                android:layout_width="77dp"
+                android:layout_height="wrap_content"
+                android:text="Result"
+                android:id="@+id/ResultText"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent" app:layout_constraintTop_toTopOf="parent"
+                android:layout_marginTop="64dp"/>
+        <TextView
+                android:text="Kotlin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="parent" app:layout_constraintEnd_toEndOf="parent"
+                android:id="@+id/Language" app:layout_constraintTop_toBottomOf="@+id/ResultText"
+                app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintVertical_bias="0.047"/>
+        <FrameLayout
+                android:layout_width="407dp"
+                android:layout_height="254dp"
+                app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent" android:id="@+id/frameLayout">
+
+            <Button
+                    android:text="Largest prime factor"
+                    android:layout_width="412dp"
+                    android:layout_height="50dp"
+                    android:onClick="KotlinPrime"
+                    app:layout_constraintStart_toStartOf="parent" app:layout_constraintEnd_toEndOf="parent"
+                    android:id="@+id/KotlinPrime"
+
+                    app:layout_constraintBottom_toTopOf="@+id/KotlinPalindrome"
+                    app:layout_constraintTop_toTopOf="@id/KotlinFibonacci" app:layout_constraintVertical_bias="0.904"
+                    app:layout_constraintTop_toBottomOf="@id/KotlinFibonacci" app:layout_constraintHorizontal_bias="1.0"
+                    android:layout_marginTop="100dp">
+            </Button>
+            <Button
+                    android:text="Largest palindrome"
+                    android:layout_width="412dp"
+                    android:layout_height="50dp"
+                    android:onClick="KotlinPalindrome"
+                    android:id="@+id/KotlinPalindrome"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/KotlinPrime"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintBottom_toTopOf="@+id/KotlinSmallest"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintTop_toTopOf="@id/KotlinPrime" app:layout_constraintVertical_bias="1.0"
+                    android:layout_marginBottom="20dp" android:layout_marginTop="150dp"/>
+            <Button
+                    android:text="Smallest multiple"
+                    android:layout_width="412dp"
+                    android:layout_height="50dp"
+                    android:onClick="KotlinSmallest"
+                    android:id="@+id/KotlinSmallest" app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent" app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintTop_toTopOf="@id/KotlinPalindrome"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintVertical_bias="0.998" android:layout_marginBottom="20dp"
+                    android:layout_marginTop="200dp"/>
+            <Button
+                    android:text="Sum of multiples"
+                    android:layout_width="412dp"
+                    android:layout_height="50dp" android:id="@+id/KotlinSum"
+                    android:onClick="KotlinSum"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent" app:layout_constraintTop_toBottomOf="@+id/Language"
+                    app:layout_constraintBottom_toTopOf="@id/KotlinFibonacci"
+                    app:layout_constraintVertical_bias="1.0" android:layout_marginTop="0dp"
+                    app:layout_constraintHorizontal_bias="1.0"/>
+            <Button
+                    android:text="Even Fibonacci"
+                    android:layout_width="412dp"
+                    android:layout_height="50dp"
+                    android:onClick="KotlinFibonacci"
+                    android:id="@+id/KotlinFibonacci"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent" app:layout_constraintBottom_toTopOf="@+id/KotlinPrime"
+                    app:layout_constraintTop_toBottomOf="@id/KotlinSum"
+                    app:layout_constraintVertical_bias="1.0" app:layout_constraintHorizontal_bias="1.0"
+                    android:layout_marginTop="50dp"/>
+        </FrameLayout>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
